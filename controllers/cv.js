@@ -2,12 +2,6 @@
 const Identity = require('../models/identitas');
 const Skill = require('../models/kemampuan');
 const History = require('../models/riwayat');
-//method untuk menampilkan halaman beranda
-exports.showHome = (req, res, next) => {
-    res.render('home', {
-        pageTitle: 'Beranda'
-    });
-}
 //method untuk menampilkan halaman cv
 exports.showCV = (req, res, next) => {
     Identity.findAll()

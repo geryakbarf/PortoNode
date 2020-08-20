@@ -9,7 +9,7 @@
             <div class="avatar" style="background-image:url(&quot;assets/img/avatars/avatar.jpg&quot;);"></div>
             <div class="about-me">
                 <p>Hallo ! Nama saya Gery Akbar Fauzi. <br>Saya seorang Developer Java, Kotlin, dan PHP. <br>Nice to
-                    meet you !</p><a class="btn btn-outline-primary" role="button" href="../hire-me.html">Contact me</a>
+                    meet you !</p>
             </div>
         </div>
     </section>
@@ -35,47 +35,25 @@
                 <h2>Keahlian saya</h2>
             </div>
             <div class="row">
+                <% for (let skill of kemampuan) {
+                    var level = skill.level %>
                 <div class="col-md-4">
                     <div class="card special-skill-item border-0">
                         <div class="card-header bg-transparent border-0"><img class="rounded-circle"
-                                                                              src="/assets/img/icon/java(1).png">
+                                                                              src="/assets/img/<%- skill.gambar %>">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Java Programming</h3>
+                            <h3 class="card-title"><%- skill.nama %></h3>
                             <div class="progress">
-                                <div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                                     style="width: 90%;"><span class="sr-only">90%</span></div>
+                                <div class="progress-bar" aria-valuenow="<%- level %>" aria-valuemin="0"
+                                     aria-valuemax="100"
+                                     style="width: <%- level + '%' %>;"><span class="sr-only"><%- level + '%' %></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card special-skill-item border-0">
-                        <div class="card-header bg-transparent border-0"><img class="rounded-circle"
-                                                                              src="/assets/img/kotlin-283155.png">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Kotlin Programming</h3>
-                            <div class="progress">
-                                <div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                                     style="width: 90%;"><span class="sr-only">90%</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card special-skill-item border-0">
-                        <div class="card-header bg-transparent border-0"><img class="rounded-circle"
-                                                                              src="/assets/img/php.png"></div>
-                        <div class="card-body">
-                            <h3 class="card-title">PHP Programming</h3>
-                            <div class="progress">
-                                <div class="progress-bar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                     style="width: 80%;"><span class="sr-only">80%</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <% } %>
             </div>
         </div>
     </section>
@@ -87,59 +65,17 @@
             <p class="text-center">Berikut adalah beberapa dari project yang saya kerjakan</p>
         </div>
         <div class="row people">
-            <div class="col-md-6 col-lg-4 item">
-                <div class="box"><img class="rounded-circle" src="/assets/img/300-512.png">
-                    <h3 class="name">AwanKu</h3>
-                    <p class="title">Cloud Drive app</p>
-                    <p class="description">AwanKu merupakan aplikasi media penyimpanan cloud. Dengan menggunakan
-                        aplikasi ini, semua file yang anda unggah akan disimpan di cloud server yang terbukti aman. Dan
-                        file - file anda akan bisa diakses melalui aplikasi ini dimana
-                        saja, dan kapan saja.</p>
+            <% for (let pro of project) { %>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="/assets/img/<%- pro.gambar %>">
+                        <h3 class="name"><%- pro.nama %></h3>
+                        <p class="description"><%- pro.detail %></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4 item">
-                <div class="box"><img class="rounded-circle" src="/assets/img/kaffah.png">
-                    <h3 class="name">Kaffah</h3>
-                    <p class="title">prayer time app</p>
-                    <p class="description">Kaffah merupakan aplikasi terpadu untuk umat. Kaffah memiliki fitur yang
-                        bermanfaat untuk umat seperti jadwal sholat digital yang sesuai dengan Kemenag, pencarian masjid
-                        terdekat, informasi masjid, pencarian ustadz, zakat online,
-                        dan masih banyak lagi.<br>&nbsp;</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 item">
-                <div class="box"><img class="rounded-circle" src="/assets/img/home(1).png">
-                    <h3 class="name">Smart Agriculture App</h3>
-                    <p class="title">iOt app</p>
-                    <p class="description">Smart Agriculture App merupakan aplikasi yang berbasis IoT untuk memonitoring
-                        dan mengontrol perkebunan anda. Dengan aplikasi ini, anda dapat mengontol dan menjadwal
-                        penyiraman kebun secara otomatis, memonitoring kelembapan tanah,
-                        suhu, cuaca, dan lain - lainnya.</p>
-                </div>
-            </div>
+            <% } %>
         </div>
     </div>
 </div>
-<section class="portfolio-block website gradient">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-12 col-lg-5 offset-lg-1 text">
-                <h3>Android Developer</h3>
-                <p>Untuk sekarang, fokus &nbsp;utama saya sebagai seorang &nbsp;Android Developer. Namun, saya juga
-                    terkadang membuat aplikasi berbasis web dengan bahasa pemrograman Php.</p>
-            </div>
-            <div class="col-md-12 col-lg-5">
-                <div class="portfolio-laptop-mockup">
-                    <div class="screen">
-                        <div class="screen-content"
-                             style="background-image: url(&quot;assets/img/tech/image6.jpg&quot;);"></div>
-                    </div>
-                    <div class="keyboard"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <%- include('partials/footer') %>
 <%- include('partials/script') %>
 </body>

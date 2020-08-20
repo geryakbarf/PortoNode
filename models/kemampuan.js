@@ -16,6 +16,10 @@ const Kemampuan = sequelize.define('kemampuan', {
         allowNull: false,
         autoIncrement: false
     },
+    gambar: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
 }, {
     timeStamp: false,
     createdAt: false,
