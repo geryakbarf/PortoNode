@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head') %>
+<body>
+<%- include('partials/navbar') %>
+<main class="page projects-page"></main>
+<div class="team-boxed">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Projects Saya</h2>
+            <p class="text-center">Berikut adalah beberapa dari project yang saya kerjakan</p>
+        </div>
+        <div class="row people">
+            <% for (let pro of project ) { %>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="assets/img/<%- pro.gambar %>">
+                        <h3 class="name"><%- pro.nama %></h3>
+                        <p class="description">
+                            <%- pro.detail %>
+                        </p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') %>
+<%- include('partials/script') %>
+</body>
+
+</html>
