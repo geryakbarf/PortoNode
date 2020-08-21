@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Agu 2020 pada 15.55
+-- Waktu pembuatan: 21 Agu 2020 pada 05.43
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.2.32
 
@@ -40,6 +40,25 @@ CREATE TABLE `identitas` (
 
 INSERT INTO `identitas` (`nama`, `ttl`, `nomor`, `email`) VALUES
 ('Gery Akbar Fauzi', 'Bandung - 1 Juni 1998', '+6285156038495', 'geryakbarfauzi\"gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `introduction`
+--
+
+CREATE TABLE `introduction` (
+  `id` int(11) NOT NULL,
+  `intro` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `introduction`
+--
+
+INSERT INTO `introduction` (`id`, `intro`) VALUES
+(1, 'Hallo ! Nama saya Gery Akbar Fauzi.<br>\r\nSaya seorang Developer Java, Kotlin, dan PHP.<br>\r\nNice to meet you !'),
+(2, 'Hallo, nama saya Gery Akbar Fauzi, panggil saja Gery. Sekarang saya sedang mengenyam pendidikan di Universitas Komputer Indonesia jurusan Teknik Informatika S1.<br>\r\nSaya memiliki keahlian di bidang bahasa pemrograman Java, Kotlin, dan PHP. Sejauh ini sudah menyelesaikan banyak projects.<br>\r\nBeberapa project yang saya kerjakan seperti AwanKu, ApotiKu, CatatanKu, Wtfforum, Kaffah, dan lain - lainnya.');
 
 -- --------------------------------------------------------
 
@@ -119,6 +138,12 @@ INSERT INTO `riwayat` (`id`, `nama`, `instansi`, `tanggal_mulai`, `tanggal_seles
 --
 
 --
+-- Indeks untuk tabel `introduction`
+--
+ALTER TABLE `introduction`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `kemampuan`
 --
 ALTER TABLE `kemampuan`
@@ -139,6 +164,12 @@ ALTER TABLE `riwayat`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `introduction`
+--
+ALTER TABLE `introduction`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `kemampuan`
