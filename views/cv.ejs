@@ -8,15 +8,18 @@
         <div class="container">
             <div class="avatar" style="background-image:url(&quot;assets/img/avatars/avatar.jpg&quot;);"></div>
             <div class="about-me">
-                <p><br>Hallo ! Nama saya Gery Akbar Fauzi. <br>Saya seorang Developer Java, Kotlin, dan PHP. <br>Nice to
-                    meet you !<br></p></div>
+                <p><br>
+                    <% for (let intro of introduction) {
+                        __append(intro.intro)
+                    } %>
+                </p></div>
         </div>
     </section>
     <section class="portfolio-block cv">
         <div class="container">
             <div class="work-experience group">
                 <div class="heading">
-                    <h2 class="text-center">pendidikan</h2>
+                    <h2 class="text-center">Pendidikan</h2>
                 </div>
                 <% for (let sch of sekolah) { %>
                     <div class="item">
