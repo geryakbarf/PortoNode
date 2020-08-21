@@ -8,8 +8,11 @@
         <div class="container">
             <div class="avatar" style="background-image:url(&quot;assets/img/avatars/avatar.jpg&quot;);"></div>
             <div class="about-me">
-                <p>Hallo ! Nama saya Gery Akbar Fauzi. <br>Saya seorang Developer Java, Kotlin, dan PHP. <br>Nice to
-                    meet you !</p>
+                <p>
+                    <% for (let intro1 of introSatu) {
+                        __append(intro1.intro)
+                    } %>
+                </p>
             </div>
         </div>
     </section>
@@ -17,11 +20,11 @@
         <div class="profile-back"></div>
         <img class="rounded-circle profile-pic" src="/assets/img/2.jpg">
         <h3 class="profile-name">Tentang Saya</h3>
-        <p class="profile-bio">Hallo, nama saya Gery Akbar Fauzi, panggil saja Gery. Sekarang saya sedang mengenyam
-            pendidikan di Universitas Komputer Indonesia jurusan Teknik Informatika S1. <br>Saya memiliki keahlian di
-            bidang bahasa pemrograman Java, Kotlin, dan PHP.
-            Sejauh ini sudah menyelesaikan banyak projects.<br>Beberapa project yang saya kerjakan seperti AwanKu,
-            ApotiKu, CatatanKu, Wtfforum, Kaffah, dan lain - lainnya.</p>
+        <p class="profile-bio">
+            <% for (let intro2 of introDua) {
+                __append(intro2.intro)
+            } %>
+        </p>
         <ul class="social-list">
             <li><a href="https://www.facebook.com/gery.a.fauzi"><i class="fa fa-facebook-official"></i></a></li>
             <li><a href="https://www.instagram.com/ini.geriya/?hl=id"> <i class="fa fa-camera-retro"></i></a></li>
